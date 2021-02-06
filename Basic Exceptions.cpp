@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-
+#include <stdio.h>
 
 void canGoWrong();
 
@@ -15,9 +15,18 @@ int main()
 void canGoWrong()
 {
 	bool error = true;
-
-	if(error)
+	try
 	{
-		throw 8;
+		if (error)
+		{
+			throw 8;
+		}
 	}
+	catch (int e)
+	{
+		std::cout << "Error Code" << e << std::endl;
+	}
+
+	std::cout << "Still Running"<< std::endl;
+
 }
