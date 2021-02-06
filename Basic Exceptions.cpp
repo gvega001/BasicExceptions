@@ -7,6 +7,7 @@ void canGoWrong(bool error);
 void mightGoWrong(bool error);
 void willGoWrong(bool error);
 
+
 int main()
 {
 	bool error1 = true;
