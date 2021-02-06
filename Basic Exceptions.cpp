@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+using namespace std;
 
 void canGoWrong(bool error);
 void mightGoWrong(bool error);
@@ -19,22 +20,22 @@ int main()
 	}
 	catch (int e)
 	{
-		std::cout << "Error Code" << e << std::endl;
+		cout << "Error Code" << e << endl;
 	}
 	catch (char const* e)
 	{
-		std::cout << "Error Message: "<<e<< std::endl;
+		cout << "Error Message: "<<e<< endl;
 	}
 	catch (std::string &e)
 	{
-		std::cout << "String Error Message: " << e << std::endl;
+		cout << "String Error Message: " << e << endl;
 	}
 	catch (char e)
 	{
-		std::cout << "Char Error Message:" << e << std::endl;
+		cout << "Char Error Message:" << e << endl;
 	}
 
-	std::cout << "Still Running" << std::endl;
+	cout << "Still Running" << endl;
 	return 0;
 }
 
@@ -48,7 +49,7 @@ void mightGoWrong(bool error)
 {
 	if (error)
 	{
-		std::string message = "Something went wrong";
+		string message = "Something went wrong";
 		throw message;
 	}
 	
